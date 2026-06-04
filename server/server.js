@@ -23,6 +23,10 @@ app.use(
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("75Check backend is running");
+});
+
 app.get("/api/test", (req, res) => {
   res.json({
     success: true,
